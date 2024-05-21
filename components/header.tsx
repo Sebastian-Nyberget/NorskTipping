@@ -17,6 +17,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+
+import { AlignJustify } from 'lucide-react';
  
 type Checked = DropdownMenuCheckboxItemProps["checked"]
 
@@ -29,10 +31,10 @@ const Header = () => {
  
 
   const links = [
-    { label: "hjem", href: "/" },
-    { label: "prosjekter", href: "/prosjekter" },
-    { label: "om-meg", href: "/om-meg" },
-    { label: "kontakt", href: "/kontakt" },
+    { label: "Pengespillvett", href: "/" },
+    { label: "Lover og Regler", href: "/lover" },
+    { label: "Ressurser", href: "/ressurser" },
+    { label: "Selvtest", href: "/selvtest" },
   ];
 
   
@@ -64,7 +66,6 @@ const Header = () => {
                   })}
                   href={link.href}
                 >
-                  <span className="text-black">#</span>
                   {link.label}
                 </Link>
               </li>
@@ -74,7 +75,7 @@ const Header = () => {
           <div className="relative inline-block">
           <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button variant="outline"><AlignJustify /></Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Appearance</DropdownMenuLabel>
