@@ -34,7 +34,7 @@ const Header = () => {
     { label: "Pengespillvett", href: "/" },
     { label: "Lover og Regler", href: "/lover" },
     { label: "Ressurser", href: "/ressurser" },
-    { label: "Selvtest", href: "/selvtest" },
+    { label: "Selvtest", href: "/quiz" },
   ];
 
   
@@ -72,7 +72,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <div className="relative inline-block">
+        {/*  <div className="relative inline-block">
           <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline"><AlignJustify /></Button>
@@ -101,7 +101,7 @@ const Header = () => {
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
-          </div>
+          </div> */}
         </nav>
       </div>
     </header>
