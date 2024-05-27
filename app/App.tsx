@@ -1,18 +1,19 @@
+"use client";
+
 import { motion, Variants } from "framer-motion";
 
 interface Props {
-  emoji: string;
+  text: string;
   hueA: number;
   hueB: number;
 }
 
 const cardVariants: Variants = {
   offscreen: {
-    y: 300
+    y: 500
   },
   onscreen: {
     y: 50,
-    rotate: -10,
     transition: {
       type: "spring",
       bounce: 0.4,
@@ -23,18 +24,18 @@ const cardVariants: Variants = {
 
 const hue = (h: number) => `hsl(${h}, 100%, 50%)`;
 
-function Card({ emoji, hueA, hueB }: Props) {
+function Card({ text, hueA, hueB }: Props) {
   const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
 
   return (
     <motion.div
-      className="overflow-hidden flex items-center justify-center relative pt-5 mb-[-30px]"
+      className="overflow-hidden flex items-center justify-center relative pt-10 mb-[-50px]"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
     >
       <div
-        className="absolute inset-0"
+        className="absolute"
         style={{
           background,
           clipPath:
@@ -42,32 +43,29 @@ function Card({ emoji, hueA, hueB }: Props) {
         }}
       />
       <motion.div
-        className="text-[164px] w-[300px] h-[430px] flex items-center justify-center bg-white rounded-[20px] shadow-[0_0_1px_hsl(0,0%,0%,0.075),0_0_2px_hsl(0,0%,0%,0.075),0_0_4px_hsl(0,0%,0%,0.075),0_0_8px_hsl(0,0%,0%,0.075),0_0_16px_hsl(0,0%,0%,0.075)] origin-[10%_60%]"
+        className="mt-28 text-[48px] w-[800px] h-[600px] flex bg-blue-300 rounded-[20px] shadow-[0_0_1px_hsl(0,0%,0%,0.075),0_0_2px_hsl(0,0%,0%,0.075),0_0_4px_hsl(0,0%,0%,0.075),0_0_8px_hsl(0,0%,0%,0.075),0_0_16px_hsl(0,0%,0%,0.075)] origin-[10%_60%] justify-center items-center"
         variants={cardVariants}
       >
-        {emoji}
+        <div className="text-center mb-4">
+          <h2 className="bold mb-4 font-semibold">{text}</h2>
+          <ul className="text-xl mb-4 list-disc list-inside">
+            <li>Ikke la barn være alene foran pc'n når du har spillsider åpne.</li>
+            <li>Vær bevisst hvordan du snakker med barn om pengespill.</li>
+            <li>Ikke tillat barn under 18 år å delta i noen former for pengespill. Dette gjelder også skrapelodd som Flax.</li>
+            <li>Beskytt spillsider eller spillprogram med passord</li>
+            <li>Oppbevar ditt brukernavn og passord utenfor barns rekkevidde.</li>
+            <li>Du kan ta i bruk filter som blokkerer spillsider på internett. Gamban er et slikt filter.</li>
+          </ul>
+        </div>
       </motion.div>
     </motion.div>
   );
 }
 
-const food: [string, number, number][] = [
-  ["🍅", 340, 10],
-  ["🍊", 20, 40],
-  ["🍋", 60, 90],
-  ["🍐", 80, 120],
-  ["🍏", 100, 140],
-  ["🫐", 205, 245],
-  ["🍆", 260, 290],
-  ["🍇", 290, 320]
-];
-
 export default function App() {
   return (
-    <div className="mx-auto max-w-[500px] pb-[100px]">
-      {food.map(([emoji, hueA, hueB]) => (
-        <Card emoji={emoji} hueA={hueA} hueB={hueB} key={emoji} />
-      ))}
+    <div className="mx-auto max-w-[900px] pb-[300px]">
+      <Card text="Generelle tips" hueA={200} hueB={250} />
     </div>
   );
 }

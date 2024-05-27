@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import App from "./App";
+import motion from "framer-motion";
+
+
 export default function Home() {
   return (
     <main className="bg-gray-100 flex min-h-screen flex-col p-24">
@@ -13,6 +17,7 @@ export default function Home() {
           <Image alt="image" src="/slagord.png" draggable='false' width={400} height={400} className="mr-20 mt-20"></Image>
         </div>
       </div>
+      <App></App>
     </main>
   );
 }
