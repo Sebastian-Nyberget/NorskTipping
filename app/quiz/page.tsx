@@ -1,31 +1,32 @@
 'use client';
+
 import React, { useState } from 'react';
 import { quiz } from '../data.js';
 
-const page = () => {
+const Page = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
-  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [checked, setChecked] = useState(false);
   const [showResult, setShowResult] = useState(false);
-  const [result, setResult] = useState({
-    score: 0,
-  });
+  const [result, setResult] = useState({ score: 0 });
 
   const { questions } = quiz;
   const { question, answers } = questions[activeQuestion];
 
   // Select and check answer
-  const onAnswerSelected = (idx) => {
+  const onAnswerSelected = (i: number) => {
     setChecked(true);
-    setSelectedAnswerIndex(idx);
+    setSelectedAnswerIndex(i);
   };
 
   // Calculate score and increment to next question
   const nextQuestion = () => {
     const scoreMap = [0, 1, 2, 3]; // Map answers to scores
-    setResult((prev) => ({
-      score: prev.score + scoreMap[selectedAnswerIndex],
-    }));
+    if (selectedAnswerIndex !== null && selectedAnswerIndex !== -1) {
+      setResult((prev) => ({
+        score: prev.score + scoreMap[selectedAnswerIndex],
+      }));
+    }
 
     setSelectedAnswerIndex(null);
     if (activeQuestion !== questions.length - 1) {
@@ -106,4 +107,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
