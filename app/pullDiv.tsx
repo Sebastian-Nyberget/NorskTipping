@@ -43,7 +43,7 @@ function Card({ text, hueA, hueB }: Props) {
         }}
       />
       <motion.div
-        className="mt-28 text-[48px] w-[800px] h-[600px] flex bg-blue-300 rounded-[20px] shadow-[0_0_1px_hsl(0,0%,0%,0.075),0_0_2px_hsl(0,0%,0%,0.075),0_0_4px_hsl(0,0%,0%,0.075),0_0_8px_hsl(0,0%,0%,0.075),0_0_16px_hsl(0,0%,0%,0.075)] origin-[10%_60%] justify-center items-center"
+        className="mt-28 text-[48px] w-[800px] h-[600px] flex bg-blue-300 mb-8 rounded-[20px] shadow-[0_0_1px_hsl(0,0%,0%,0.075),0_0_2px_hsl(0,0%,0%,0.075),0_0_4px_hsl(0,0%,0%,0.075),0_0_8px_hsl(0,0%,0%,0.075),0_0_16px_hsl(0,0%,0%,0.075)] origin-[10%_60%] justify-center items-center"
         variants={cardVariants}
       >
         <div className="text-center mb-4">
@@ -64,7 +64,7 @@ function Card({ text, hueA, hueB }: Props) {
 
 export default function App() {
   return (
-    <div className="mx-auto max-w-[900px] pb-[300px]">
+    <div className="mx-auto max-w-[900px]">
       <Card text="Generelle tips" hueA={200} hueB={250} />
     </div>
   );

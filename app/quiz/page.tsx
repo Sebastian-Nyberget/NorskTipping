@@ -67,20 +67,20 @@ const Page = () => {
             ))}
             {checked ? (
               <button onClick={nextQuestion} className='w-full mt-3 py-4 px-2 text-xl rounded cursor-pointer bg-gray-500 text-gray-200'>
-                {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+                {activeQuestion === questions.length - 1 ? 'Fullfør' : 'Neste'}
               </button>
             ) : (
               <button onClick={nextQuestion} disabled className='w-full mt-3 py-4 px-2 text-xl rounded cursor-pointer bg-gray-300 text-gray-500'>
-                {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+                {activeQuestion === questions.length - 1 ? 'Fullfør' : 'Neste'}
               </button>
             )}
           </div>
         ) : (
           <div className='bg-gray-100 p-4 mt-8 rounded'>
-            <h3 className='pb-8 text-3xl text-gray-800'>Results</h3>
-            <h3 className='pb-8 text-3xl text-gray-800'>Overall {overallPercentage}%</h3>
+            <h3 className='pb-8 text-3xl text-gray-800'>Resultater</h3>
+            <h3 className='pb-8 text-3xl text-gray-800'>Totalt {overallPercentage}%</h3>
             <p className='py-2'>
-              Total Score: <span>{result.score}</span>
+              Totalt poeng: <span>{result.score}</span>
             </p>
             <p className='py-2'>
               0-10 %: Ingen eller minimal risiko for pengespillavhengighet. Du har god kontroll over dine spillevaner.
@@ -98,7 +98,7 @@ const Page = () => {
               71-100 %: Svært høy risiko for pengespillavhengighet. Det er sterkt anbefalt at du søker profesjonell hjelp umiddelbart for å håndtere dette problemet.
               </p>
             <button onClick={() => window.location.reload()} className='w-full mt-3 py-4 px-2 text-xl rounded cursor-pointer bg-gray-500 text-gray-200'>
-              Restart
+              Prøv på nytt
             </button>
           </div>
         )}
