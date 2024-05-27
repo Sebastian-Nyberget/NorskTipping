@@ -35,7 +35,8 @@ export default function Home() {
         </ul>
       </div>
 
-      <div className="mt-20 justify-center items-center flex flex-col">
+    <div className="flex flex-col items-center">
+      <div className="justify-center items-center flex flex-col bg-blue-300 w-1/2 h-80 rounded-b-lg">
         <h1 className="font-bold ml-4 text-4xl mb-2">Selvtest</h1>
         <p className="mt-4 font-semibold text-lg">Ta en selvtest for å finne ut om du er pengespillavhengig</p>
 
@@ -45,6 +46,7 @@ export default function Home() {
         </motion.button>
         </a>
       </div>
-    </main>
+    </div>
+  </main>
   );
 }
