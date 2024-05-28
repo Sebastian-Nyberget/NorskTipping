@@ -60,7 +60,6 @@ const Header = () => {
                 <Link
                   className={classNames({
                     "text-black": link.href === currentPath,
-                    "text-black": link.href !== currentPath,
                     "hover:text-black transition-colors": true,
                     "mr-4": true,
                   })}
