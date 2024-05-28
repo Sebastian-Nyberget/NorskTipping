@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { motion, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion"
 
 interface Props {
   text: string;
@@ -49,7 +49,7 @@ function Card({ text, hueA, hueB }: Props) {
         <div className="text-center mb-4">
           <h2 className="bold mb-4 font-semibold">{text}</h2>
           <ul className="text-xl mb-4 list-disc list-inside">
-            <li>Ikke la barn være alene foran pc'n når du har spillsider åpne.</li>
+            <li>Ikke la barn være alene foran pc&apos;n når du har spillsider åpne.</li>
             <li>Vær bevisst hvordan du snakker med barn om pengespill.</li>
             <li>Ikke tillat barn under 18 år å delta i noen former for pengespill. Dette gjelder også skrapelodd som Flax.</li>
             <li>Beskytt spillsider eller spillprogram med passord</li>
