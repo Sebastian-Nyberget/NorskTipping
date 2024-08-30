@@ -2,7 +2,8 @@
 
 ## Description
 
-The **Norsk Tipping ** is a web-based application that allows users to as. The test is based on a series of questions that evaluate various aspects of gambling behavior. The website is built using Next.js and provides a user-friendly interface for visitors to determine their level of gambling addiction.
+**Norsk Tipping** is Norway's state-owned gambling company. They offer an online tool for users to assess their gambling behavior through a quick questionnaire. 
+The site, built with Next.js, is user-friendly and helps identify potential gambling addiction.
 
 ## Table of Contents
 
